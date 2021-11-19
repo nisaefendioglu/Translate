@@ -3,4 +3,130 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    <string-array name="languages_supporteds">
+        <item>English</item>
+        <item>Arabic </item>
+        <item>Belarusian </item>
+        <item>Bulgarian </item>
+        <item>Bengali </item>
+        <item>Catalan </item>
+        <item> Czech </item>
+        <item>Welsh </item>
+        <item>Danish </item>
+        <item>German</item>
+        <item>Greek</item>
+        <item>Afrikaans</item>
+        <item>Esperanto </item>
+        <item> Spanish</item>
+        <item>Estonian</item>
+        <item>Persian</item>
+        <item>Finnish</item>
+        <item>French</item>
+        <item>Irish</item>
+        <item>Galician</item>
+        <item>Gujarati</item>
+        <item>Hebrew</item>
+        <item>Hindi</item>
+        <item>Croatian</item>
+        <item>Haitian</item>
+        <item>Hungarian</item>
+        <item>Indonesian</item>
+        <item>Icelandic</item>
+        <item>Italian</item>
+        <item>Japanese</item>
+        <item>Georgian</item>
+        <item>Kannada</item>
+        <item>Korean</item>
+        <item>Lithuanian</item>
+        <item>Latvian</item>
+        <item>Macedonian</item>
+        <item>Marathi</item>
+        <item>Malay</item>
+        <item>Maltese</item>
+        <item>Dutch</item>
+        <item>Norwegian</item>
+        <item>Polish</item>
+        <item>Portuguese</item>
+        <item>Romanian</item>
+        <item>Russian</item>
+        <item>Slovak</item>
+        <item>Slovenian</item>
+        <item>Albanian</item>
+        <item>Swedish</item>
+        <item>Swahili</item>
+        <item>Tamil</item>
+        <item>Telugu</item>
+        <item>Thai</item>
+        <item>Tagalog</item>
+        <item>Turkish</item>
+        <item>Ukrainian</item>
+        <item>Urdu</item>
+        <item>Vietnamese</item>
+        <item>Chinese</item>
+    </string-array>
+
+    <string-array name="languages_supported1">
+        <item>Auto-Detect</item>
+        <item>English</item>
+        <item>Arabic </item>
+        <item>Belarusian </item>
+        <item>Bulgarian </item>
+        <item>Bengali </item>
+        <item>Catalan </item>
+        <item> Czech </item>
+        <item>Welsh </item>
+        <item>Danish </item>
+        <item>German</item>
+        <item>Greek</item>
+        <item>Afrikaans</item>
+        <item>Esperanto </item>
+        <item> Spanish</item>
+        <item>Estonian</item>
+        <item>Persian</item>
+        <item>Finnish</item>
+        <item>French</item>
+        <item>Irish</item>
+        <item>Galician</item>
+        <item>Gujarati</item>
+        <item>Hebrew</item>
+        <item>Hindi</item>
+        <item>Croatian</item>
+        <item>Haitian</item>
+        <item>Hungarian</item>
+        <item>Indonesian</item>
+        <item>Icelandic</item>
+        <item>Italian</item>
+        <item>Japanese</item>
+        <item>Georgian</item>
+        <item>Kannada</item>
+        <item>Korean</item>
+        <item>Lithuanian</item>
+        <item>Latvian</item>
+        <item>Macedonian</item>
+        <item>Marathi</item>
+        <item>Malay</item>
+        <item>Maltese</item>
+        <item>Dutch</item>
+        <item>Norwegian</item>
+        <item>Polish</item>
+        <item>Portuguese</item>
+        <item>Romanian</item>
+        <item>Russian</item>
+        <item>Slovak</item>
+        <item>Slovenian</item>
+        <item>Albanian</item>
+        <item>Swedish</item>
+        <item>Swahili</item>
+        <item>Tamil</item>
+        <item>Telugu</item>
+        <item>Thai</item>
+        <item>Tagalog</item>
+        <item>Turkish</item>
+        <item>Ukrainian</item>
+        <item>Urdu</item>
+        <item>Vietnamese</item>
+        <item>Chinese</item>
+    </string-array>
+
 </resources>

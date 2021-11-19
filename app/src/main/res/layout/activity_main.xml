@@ -98,7 +98,7 @@
             android:layout_height="wrap_content"
             android:padding="3dp"
             android:textSize="14dp"
-            android:text="Language Detected : "
+            android:text="Language Detected Please  👆 "
             android:textColor="@color/black"
             android:layout_gravity="bottom"
             android:layout_marginLeft="20dp"
