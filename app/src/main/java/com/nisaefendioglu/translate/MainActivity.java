@@ -1,7 +1,6 @@
 package com.nisaefendioglu.translate;
 
 import static java.lang.Thread.sleep;
-
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -81,17 +80,15 @@ public class MainActivity extends AppCompatActivity {
         LanguageTags();
         LanguageNames();
 
-        input_editText = findViewById(R.id.userText_editText);
-        result_TextView = findViewById(R.id.result_textView);
+        input_editText = findViewById(R.id.enterText);
+        result_TextView = findViewById(R.id.result);
         result_TextView.setMovementMethod(new ScrollingMovementMethod());
-        selected_language_textView=findViewById(R.id.detected_language_textView);
-        translate_button = findViewById(R.id.translate_button);
+        selected_language_textView=findViewById(R.id.selected_language);
+        translate_button = findViewById(R.id.translate);
         shuffle_imgButton = findViewById(R.id.swap_imageButton);
-        language1Spinner = findViewById(R.id.language1_spinner);
-        language2Spinner = findViewById(R.id.language2_spinner);
+        language1Spinner = findViewById(R.id.language1);
+        language2Spinner = findViewById(R.id.language2);
         modelManager = RemoteModelManager.getInstance();
-        progressBar_main = findViewById(R.id.progressbar_main);
-        progressBarTextView_main = findViewById(R.id.progressbarTextview_main);
         copy_imageView = findViewById(R.id.copy_imageview);
 
 
@@ -259,9 +256,6 @@ public class MainActivity extends AppCompatActivity {
                         DownloadConditions conditions = new DownloadConditions.Builder().build();
                                 translator.downloadModelIfNeeded(conditions)
                                         .addOnSuccessListener(unused -> {
-
-
-                                            progressBar_main.setVisibility(View.INVISIBLE);
 
                                             String lang1_tag = Language_Tags.get(LanguageOne);
                                             LanguageOneTAG = TranslateLanguage.fromLanguageTag(lang1_tag);

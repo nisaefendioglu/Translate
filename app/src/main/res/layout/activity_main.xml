@@ -24,7 +24,7 @@
         android:orientation="horizontal">
 
         <Spinner
-            android:id="@+id/language1_spinner"
+            android:id="@+id/language1"
             android:background="@drawable/spinner_background"
             android:layout_width="148dp"
             android:layout_height="35dp"
@@ -42,7 +42,7 @@
             android:src="@drawable/forward" />
 
         <Spinner
-            android:id="@+id/language2_spinner"
+            android:id="@+id/language2"
             android:background="@drawable/spinner_background"
             android:layout_width="148dp"
             android:layout_height="35dp"
@@ -67,7 +67,7 @@
         android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/userText_editText"
+            android:id="@+id/enterText"
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:layout_margin="5dp"
@@ -82,18 +82,9 @@
             android:textSize="20dp"
             tools:layout_editor_absoluteY="158dp" />
 
-        <ProgressBar
-            android:id="@+id/progressbar_main"
-            android:visibility="invisible"
-            android:layout_width="80dp"
-            android:layout_height="70dp"
-            android:indeterminate="true"
-            android:indeterminateTintMode="src_atop"
-            android:indeterminateTint="@color/black"
-            android:layout_gravity="center_horizontal|center_vertical" />
 
         <TextView
-            android:id="@+id/detected_language_textView"
+            android:id="@+id/selected_language"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="3dp"
@@ -105,21 +96,11 @@
             android:layout_marginBottom="20dp"
             />
 
-        <TextView
-            android:id="@+id/progressbarTextview_main"
-            android:visibility="invisible"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="please wait..."
-            android:layout_gravity="center_vertical|center_horizontal"
-            android:layout_marginTop="50dp"
-            android:textColor="@color/black"
-            />
 
     </FrameLayout>
 
     <Button
-        android:id="@+id/translate_button"
+        android:id="@+id/translate"
         android:layout_width="382dp"
         android:background="@drawable/text_design"
         android:textColor="@color/white"
@@ -138,7 +119,7 @@
 
 
         <TextView
-            android:id="@+id/result_textView"
+            android:id="@+id/result"
             android:layout_width="match_parent"
             android:layout_height="230dp"
             android:layout_margin="5dp"
