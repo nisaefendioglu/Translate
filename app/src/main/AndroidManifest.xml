@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Translate">
         <activity
-            android:name=".MainActivity"
+            android:name=".Splash_Screen"
             android:exported="true"
             android:label="@string/app_name">
             <intent-filter>
@@ -19,6 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity"/>
     </application>
 
 </manifest>
