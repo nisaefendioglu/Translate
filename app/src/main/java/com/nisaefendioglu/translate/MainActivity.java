@@ -218,12 +218,8 @@ public class MainActivity extends AppCompatActivity {
                 modelManager.isModelDownloaded(model2)
                         .addOnSuccessListener(aBoolean -> {
                             LanguageTwoDownloaded = aBoolean;
-                            Log.d(TAG, " IS_LANGUAGE2_DOWNLOADED: " + LanguageTwoDownloaded);
-                            Log.d(TAG, " LANGUAGE2 DOWNLOADED ON DEVICE: " + aBoolean);
                         })
                         .addOnFailureListener(e -> {
-                            Log.d(TAG, "get_downloaded_models: FAILED ");
-                            Log.d(TAG, "get_downloaded_models: " + e.getMessage());
                         });
 
             }
@@ -258,11 +254,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         if (LanguageOneDownloaded & LanguageTwoDownloaded) {
-            Log.d(TAG, " BOTH MODELS ARE PRESENT ON DEVICE ");
-
             translator.translate(user_text)
                     .addOnSuccessListener(s -> {
-                        Log.d(TAG, "translate_string: TRANSLATED TEXT : " + s);
                         DownloadConditions conditions = new DownloadConditions.Builder().build();
                                 translator.downloadModelIfNeeded(conditions)
                                         .addOnSuccessListener(unused -> {
@@ -281,14 +274,8 @@ public class MainActivity extends AppCompatActivity {
 
                                             translate_text();
 
-
                                         })
                                         .addOnFailureListener(e -> {
-                                            progressBar_main.setVisibility(View.INVISIBLE);
-                                            progressBarTextView_main.setVisibility(View.INVISIBLE);
-                                            Log.d(TAG, "onClick: " + e.getMessage());
-                                            Toast.makeText(getApplicationContext(),
-                                                    "Downloading Failed! Try again", Toast.LENGTH_SHORT).show();
                                         });
 
                         result_TextView.setText(s);
@@ -297,7 +284,6 @@ public class MainActivity extends AppCompatActivity {
                         Log.d(TAG, "translate_string: " + e.getMessage());
                     });
         }
-
 
     }
 
@@ -431,7 +417,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void CopyResult2Clipboard(View view) {
+    public void CopyResultClipboard(View view) {
         String text = result_TextView.getText().toString();
         ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
         ClipData clip = ClipData.newPlainText("Result", text);
