@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/purple_200"/>
+                    <padding android:right="12dp"
+                        android:left="12dp"/>
+                    <corners android:radius="4dp"/>
+                    <stroke android:color="#000000" android:width="1dp" />
+                </shape>
+
+            </item>
+
+            <item
+                android:drawable="@drawable/down"
+                android:gravity="end"/>
+
+        </layer-list>
+
+    </item>
+</selector>

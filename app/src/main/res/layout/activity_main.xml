@@ -1,14 +1,172 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/container"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="?attr/actionBarSize">
+    android:orientation="vertical"
+    android:background="@drawable/gradient"
+    tools:context=".MainActivity">
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Translate"/>
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Let's Translate 👻"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/language1_spinner"
+            android:background="@drawable/spinner_background"
+            android:layout_width="148dp"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:spinnerMode="dialog"
+            tools:layout_editor_absoluteX="20dp"
+            tools:layout_editor_absoluteY="73dp" />
+
+        <ImageButton
+            android:id="@+id/swap_imageButton"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rectangle"
+            android:src="@drawable/forward" />
+
+        <Spinner
+            android:id="@+id/language2_spinner"
+            android:background="@drawable/spinner_background"
+            android:layout_width="148dp"
+            android:layout_height="35dp"
+            android:layout_margin="10dp"
+            android:spinnerMode="dialog"
+            tools:layout_editor_absoluteX="246dp"
+            tools:layout_editor_absoluteY="73dp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/white"
+        tools:layout_editor_absoluteY="120dp" />
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/userText_editText"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rectangle"
+            android:ems="10"
+            android:gravity="top"
+            android:alpha="0.83"
+            android:hint="Enter Text"
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="20dp"
+            tools:layout_editor_absoluteY="158dp" />
+
+        <ProgressBar
+            android:id="@+id/progressbar_main"
+            android:visibility="invisible"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:indeterminate="true"
+            android:indeterminateTintMode="src_atop"
+            android:indeterminateTint="@color/black"
+            android:layout_gravity="center_horizontal|center_vertical" />
+
+        <TextView
+            android:id="@+id/detected_language_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3dp"
+            android:textSize="14dp"
+            android:text="Language Detected : "
+            android:textColor="@color/black"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp"
+            />
+
+        <TextView
+            android:id="@+id/progressbarTextview_main"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="please wait..."
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="50dp"
+            android:textColor="@color/black"
+            />
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/translate_button"
+        android:layout_width="382dp"
+        android:background="@drawable/text_design"
+        android:textColor="@color/white"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:text="Translate"
+        android:textSize="17dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        tools:layout_editor_absoluteX="23dp"
+        tools:layout_editor_absoluteY="390dp" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/result_textView"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/rectangle"
+            android:gravity="top"
+            android:scrollbars="vertical"
+            android:alpha="0.83"
+            android:hint="Translated Text "
+            android:padding="8dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="20dp"
+            tools:layout_editor_absoluteY="438dp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:src="@drawable/copy"
+            android:layout_height="30dp"
+            android:clickable="true"
+            android:onClick="CopyResult2Clipboard"
+            android:layout_gravity="end|bottom"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/copy_imageview"
+            android:focusable="true"
+            tools:ignore="OnClick"
+            android:layout_marginRight="20dp" />
+
+    </FrameLayout>
+
+
+</LinearLayout>
