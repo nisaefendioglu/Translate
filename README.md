@@ -7,6 +7,12 @@ implementation 'com.google.mlkit:translate:16.1.2'
 implementation 'com.google.mlkit:language-id:17.0.0'
 implementation 'androidx.multidex:multidex:2.0.1'
 ```
+
+
+## Google Play Store :
+
+[![Get it on Google Play](https://play.google.com/intl/en_us/badges/images/badge_new.png)](https://play.google.com/store/apps/details?id=com.nisaefendioglu.translate)
+
 <br>
 Screenshots of the app :
 <br><br><br>
