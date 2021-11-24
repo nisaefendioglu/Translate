@@ -1,4 +1,5 @@
 package com.nisaefendioglu.translate;
+
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -21,7 +22,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import com.google.mlkit.common.model.DownloadConditions;
 import com.google.mlkit.common.model.RemoteModelManager;
 import com.google.mlkit.nl.languageid.LanguageIdentification;
@@ -32,18 +35,7 @@ import com.google.mlkit.nl.translate.Translation;
 import com.google.mlkit.nl.translate.Translator;
 import com.google.mlkit.nl.translate.TranslatorOptions;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
 import java.util.HashMap;
-import java.util.Objects;
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -56,8 +48,8 @@ public class MainActivity extends AppCompatActivity {
     ProgressBar progressBar_main;
     static String LanguageOne = "English";
     static String LanguageTwo = "Turkish";
-    static Boolean LanguageOneDownloaded = null;
-    static Boolean LanguageTwoDownloaded = null;
+    static boolean LanguageOneDownloaded = false;
+    static boolean LanguageTwoDownloaded = false;
     static String LanguageOneTAG = null;
     static String LanguageTwoTAG = null;
     static HashMap<String, String> Language_Tags;
@@ -183,9 +175,11 @@ public class MainActivity extends AppCompatActivity {
                     TranslateRemoteModel model1 = new TranslateRemoteModel.Builder(LanguageOneTAG).build();
                     modelManager.isModelDownloaded(model1)
                             .addOnSuccessListener(aBoolean -> {
-                                LanguageOneDownloaded = aBoolean;
+                                LanguageOneDownloaded = true;
+                                Log.i("10-02", "Language One Download Succeeded: " + LanguageOneDownloaded);
                             })
                             .addOnFailureListener(e -> {
+                                Log.e("10-02", "Language One Download Failed: " + e.getMessage());
                             });
                 }
 
@@ -209,9 +203,11 @@ public class MainActivity extends AppCompatActivity {
                 TranslateRemoteModel model2 = new TranslateRemoteModel.Builder(LanguageTwoTAG).build();
                 modelManager.isModelDownloaded(model2)
                         .addOnSuccessListener(aBoolean -> {
-                            LanguageTwoDownloaded = aBoolean;
+                            LanguageTwoDownloaded = true;
+                            Log.i("10-02", "Language Two Download Succeeded: " + LanguageTwoDownloaded);
                         })
                         .addOnFailureListener(e -> {
+                            Log.e("10-02", "Language Two Download Failed: " + e.getMessage());
                         });
 
             }
@@ -243,37 +239,57 @@ public class MainActivity extends AppCompatActivity {
                 .setTargetLanguage(LanguageTwoTAG)
                 .build();
         final Translator translator = Translation.getClient(options);
-
+        Log.e(TAG, "10-02-Translating: " + user_text + " L1: " + LanguageOneTAG + "-" + LanguageOneDownloaded + " L2: " + LanguageTwoTAG + "-" + LanguageTwoDownloaded);
 
         if (LanguageOneDownloaded & LanguageTwoDownloaded) {
             translator.translate(user_text)
                     .addOnSuccessListener(s -> {
-                        DownloadConditions conditions = new DownloadConditions.Builder().build();
-                                translator.downloadModelIfNeeded(conditions)
-                                        .addOnSuccessListener(unused -> {
-
-                                            String lang1_tag = Language_Tags.get(LanguageOne);
-                                            LanguageOneTAG = TranslateLanguage.fromLanguageTag(lang1_tag);
-
-                                            String lang2_tag = Language_Tags.get(LanguageTwo);
-                                            LanguageTwoTAG = TranslateLanguage.fromLanguageTag(lang2_tag);
-
-                                            LanguageOneDownloaded = true;
-                                            LanguageTwoDownloaded = true;
-
-                                            translate_text();
-
-                                        })
-                                        .addOnFailureListener(e -> {
-                                        });
-
                         result_TextView.setText(s);
                     })
                     .addOnFailureListener(e -> {
-                        Log.d(TAG, "translate_string: " + e.getMessage());
+                        Log.e(TAG, "10-02-translate failed: " + e.getMessage());
+                        downloadModel();
                     });
         }
+        else {
+            Toast t;
+            if (!LanguageOneDownloaded) {
+                t = Toast.makeText(this, "Language One Not Downloaded", Toast.LENGTH_SHORT);
+            }
+            else {
+                t = Toast.makeText(this, "Language Two Not Downloaded", Toast.LENGTH_SHORT);
+            }
+            t.show();
+        }
 
+    }
+
+    private void downloadModel() {
+        DialogUtil.showLoader(this, false);
+        TranslatorOptions options = new TranslatorOptions.Builder()
+                .setSourceLanguage(LanguageOneTAG)
+                .setTargetLanguage(LanguageTwoTAG)
+                .build();
+        final Translator translator = Translation.getClient(options);
+        DownloadConditions conditions = new DownloadConditions.Builder().build();
+        translator.downloadModelIfNeeded(conditions)
+                .addOnSuccessListener(unused -> {
+                    String lang1_tag = Language_Tags.get(LanguageOne);
+                    LanguageOneTAG = TranslateLanguage.fromLanguageTag(lang1_tag);
+
+                    String lang2_tag = Language_Tags.get(LanguageTwo);
+                    LanguageTwoTAG = TranslateLanguage.fromLanguageTag(lang2_tag);
+
+                    LanguageOneDownloaded = true;
+                    LanguageTwoDownloaded = true;
+
+                    translate_text();
+                    DialogUtil.hideLoader();
+                })
+                .addOnFailureListener(e -> {
+                    Log.e(TAG, "10-02-translate failed (model download): " + e.getMessage());
+                    DialogUtil.hideLoader();
+                });
     }
 
     private void LanguageTags() {

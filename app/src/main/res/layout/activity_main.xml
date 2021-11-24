@@ -13,25 +13,28 @@
         android:layout_height="wrap_content"
         android:textColor="@color/white"
         android:textSize="25dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:gravity="center"
-        android:text="Let's Translate 👻"/>
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:text="  Let's Translate 👻"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
         android:orientation="horizontal">
 
         <Spinner
             android:id="@+id/language1"
             android:background="@drawable/spinner_background"
-            android:layout_width="148dp"
+            android:layout_width="140dp"
             android:layout_height="35dp"
-            android:layout_margin="10dp"
-            android:spinnerMode="dialog"
-            tools:layout_editor_absoluteX="20dp"
-            tools:layout_editor_absoluteY="73dp" />
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:spinnerMode="dialog" />
 
         <ImageButton
             android:id="@+id/swap_imageButton"
@@ -44,20 +47,20 @@
         <Spinner
             android:id="@+id/language2"
             android:background="@drawable/spinner_background"
-            android:layout_width="148dp"
+            android:layout_width="140dp"
             android:layout_height="35dp"
-            android:layout_margin="10dp"
-            android:spinnerMode="dialog"
-            tools:layout_editor_absoluteX="246dp"
-            tools:layout_editor_absoluteY="73dp" />
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:spinnerMode="dialog"/>
 
     </LinearLayout>
 
     <View
         android:id="@+id/view2"
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1dp"
         android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
         android:background="@color/white"
         tools:layout_editor_absoluteY="120dp" />
 
@@ -69,7 +72,7 @@
         <EditText
             android:id="@+id/enterText"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="200dp"
             android:layout_margin="5dp"
             android:background="@drawable/rectangle"
             android:ems="10"
@@ -101,7 +104,7 @@
 
     <Button
         android:id="@+id/translate"
-        android:layout_width="382dp"
+        android:layout_width="350dp"
         android:background="@drawable/text_design"
         android:textColor="@color/white"
         android:layout_height="60dp"
@@ -121,7 +124,7 @@
         <TextView
             android:id="@+id/result"
             android:layout_width="match_parent"
-            android:layout_height="230dp"
+            android:layout_height="200dp"
             android:layout_margin="5dp"
             android:background="@drawable/rectangle"
             android:gravity="top"
@@ -135,9 +138,9 @@
             tools:layout_editor_absoluteY="438dp" />
 
         <ImageView
-            android:layout_width="30dp"
+            android:layout_width="25dp"
             android:src="@drawable/copy"
-            android:layout_height="30dp"
+            android:layout_height="25dp"
             android:clickable="true"
             android:onClick="CopyResultClipboard"
             android:layout_gravity="end|bottom"

@@ -48,7 +48,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     implementation 'com.google.mlkit:translate:16.1.2'
-    implementation 'com.google.mlkit:language-id:17.0.0'
+    implementation 'com.google.mlkit:language-id:17.0.1'
 
     implementation 'androidx.multidex:multidex:2.0.1'
 
