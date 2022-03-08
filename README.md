@@ -1,5 +1,6 @@
 # Translate
 ### I'm here when you need translation 👀
+- Translation application that does not need the Internet.
 
 ## 🔨   Libraries used in the project :
 ```
