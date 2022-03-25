@@ -18,7 +18,8 @@ implementation 'androidx.multidex:multidex:2.0.1'
 Screenshots of the app :
 <br><br><br>
 
-<img width="400" alt="Untitled-removebg-preview (2) (1)" src="https://user-images.githubusercontent.com/48391281/142634346-06a6079c-b26b-4a00-b819-4acd1b695d4e.png">
+![Fotoram io](https://user-images.githubusercontent.com/48391281/160115979-1771dc4f-54e7-44b0-bc45-cc8123fdcf1e.jpg)
+
 
 
 ## License
