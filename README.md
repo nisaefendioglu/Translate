@@ -7,7 +7,6 @@
 [![Get it on Google Play](https://play.google.com/intl/en_us/badges/images/badge_new.png)](https://play.google.com/store/apps/details?id=com.nisaefendioglu.translate)
 
 Screenshots of the app :
-<br><br>
 
 <img width="1158" alt="Screen Shot 2022-04-12 at 15 38  (1)" src="https://user-images.githubusercontent.com/48391281/162965378-eacf3c25-340d-426a-bd5c-2ddf52effa15.png">
 
