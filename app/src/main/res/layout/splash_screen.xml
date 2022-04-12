@@ -11,7 +11,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center"
-        android:background="@drawable/translate" />
+        android:background="@drawable/translator" />
 
     <TextView
         android:layout_width="wrap_content"

@@ -22,7 +22,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:layout_gravity="center"
         android:gravity="center_horizontal"
         android:orientation="horizontal">
@@ -73,7 +73,7 @@
             android:id="@+id/enterText"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:layout_margin="5dp"
+            android:layout_margin="10dp"
             android:background="@drawable/rectangle"
             android:ems="10"
             android:gravity="top"
@@ -111,7 +111,7 @@
         android:layout_gravity="center"
         android:text="Translate"
         android:textSize="17dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:layout_marginBottom="5dp"
         tools:layout_editor_absoluteX="23dp"
         tools:layout_editor_absoluteY="390dp" />
@@ -125,7 +125,7 @@
             android:id="@+id/result"
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:layout_margin="5dp"
+            android:layout_margin="10dp"
             android:background="@drawable/rectangle"
             android:gravity="top"
             android:scrollbars="vertical"

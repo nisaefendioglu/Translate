@@ -1,17 +1,26 @@
 <resources>
-    <string name="app_name">translate</string>
+    <string name="app_name">Translate</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
+    <string name="splash_screen">Im here when you need translation 👀</string>
+    <string name="translate">Lets Translate 👻</string>
+    <string name="enter">Enter Text</string>
+    <string name="detected">Language Detected Please 👆</string>
+    <string name="gototranslation">Translate</string>
+    <string name="translated">Translated Text</string>
+
+
     <string-array name="languages_supporteds">
         <item>English</item>
+        <item>French</item>
         <item>Arabic </item>
         <item>Belarusian </item>
         <item>Bulgarian </item>
         <item>Bengali </item>
         <item>Catalan </item>
-        <item> Czech </item>
+        <item>Czech </item>
         <item>Welsh </item>
         <item>Danish </item>
         <item>German</item>
@@ -22,7 +31,6 @@
         <item>Estonian</item>
         <item>Persian</item>
         <item>Finnish</item>
-        <item>French</item>
         <item>Irish</item>
         <item>Galician</item>
         <item>Gujarati</item>
@@ -67,7 +75,7 @@
     </string-array>
 
     <string-array name="languages_supported1">
-        <item>Auto-Detect</item>
+        <item>Turkish</item>
         <item>English</item>
         <item>Arabic </item>
         <item>Belarusian </item>
@@ -122,7 +130,6 @@
         <item>Telugu</item>
         <item>Thai</item>
         <item>Tagalog</item>
-        <item>Turkish</item>
         <item>Ukrainian</item>
         <item>Urdu</item>
         <item>Vietnamese</item>

@@ -14,7 +14,7 @@
         app:layout_constraintStart_toStartOf="parent"
         android:layout_margin="12dp"
         android:text="Downloading Language"
-        android:textColor="@color/black"
+        android:textColor="#7b9afc"
         />
     <com.google.android.material.progressindicator.CircularProgressIndicator
         android:id="@+id/pb"
