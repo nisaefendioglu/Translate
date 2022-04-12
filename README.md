@@ -2,25 +2,20 @@
 ### I'm here when you need translation 👀
 - Translation application that does not need the Internet.
 
+## Google Play Store :
+
+[![Get it on Google Play](https://play.google.com/intl/en_us/badges/images/badge_new.png)](https://play.google.com/store/apps/details?id=com.nisaefendioglu.translate)
+
+Screenshots of the app :
+
+<img width="1158" alt="Screen Shot 2022-04-12 at 15 38  (1)" src="https://user-images.githubusercontent.com/48391281/162965378-eacf3c25-340d-426a-bd5c-2ddf52effa15.png">
+
 ## 🔨   Libraries used in the project :
 ```
 implementation 'com.google.mlkit:translate:16.1.2'
 implementation 'com.google.mlkit:language-id:17.0.0'
 implementation 'androidx.multidex:multidex:2.0.1'
 ```
-
-
-## Google Play Store :
-
-[![Get it on Google Play](https://play.google.com/intl/en_us/badges/images/badge_new.png)](https://play.google.com/store/apps/details?id=com.nisaefendioglu.translate)
-
-<br>
-Screenshots of the app :
-<br><br><br>
-
-![Fotoram io](https://user-images.githubusercontent.com/48391281/160115979-1771dc4f-54e7-44b0-bc45-cc8123fdcf1e.jpg)
-
-
 
 ## License
 ```
